@@ -1,9 +1,6 @@
-<h1>Products</h1>
-
-<div id="products">
+<h1>Produtos</h1>
+<div>
   <% @products.each do |product| %>
-    <div>
-      <%= product.name %>
-    </div>
+      <p><%= product.name %></p>
   <% end %>
 </div>
