@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
-  
+
   private
     def product_params
       params.expect(product: [ :name ])
