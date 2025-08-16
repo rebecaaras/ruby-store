@@ -2,11 +2,11 @@
   <h1>Produtos</h1>
   <%= link_to "Novo produto", new_product_path if authenticated?%>
   <%= link_to "Login", new_session_path unless authenticated? %>
-  
-  <div id="products" class="row row-cols-1 row-cols-md-2 g-4">
+
+  <div id="products" class="row row-cols-1 row-cols-md-2 g-4 .row-cols-3">
   <% @products.each do |product| %>
-    <div class="card" style="width: 18rem;">
-      <%= image_tag product.featured_image, class: "card-img-top" if product.featured_image.attached? %>
+    <div class="card" style="width: 18rem; margin: 0.5rem; padding-top: 10px;">
+      <%= image_tag product.featured_image, class:"w-full card-img-top" if product.featured_image.attached? %>
       <div class="card-body">
         <h5 class="card-title"><%= link_to product.name, product %></h5>
         <p class="card-text"><%= product.description %></p>
