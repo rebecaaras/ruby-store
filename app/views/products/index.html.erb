@@ -1,8 +1,9 @@
 <div class="container">
-  <h1>Produtos</h1>
-  <%= link_to "Novo produto", new_product_path if authenticated?%>
-  <%= link_to "Login", new_session_path unless authenticated? %>
-
+  <div>
+    <h1>Produtos</h1>
+    <%= link_to "Novo produto", new_product_path if authenticated?%>
+    <%= link_to "Login", new_session_path unless authenticated? %>
+  </div>
   <div id="products" class="row row-cols-1 row-cols-md-2 g-4 .row-cols-3">
   <% @products.each do |product| %>
     <div class="card" style="width: 18rem; margin: 0.5rem; padding-top: 10px;">
